@@ -4,18 +4,18 @@ namespace P2_LaptopShop
 {
     class Battery
     {
-        private string BatteryName;
+        private string BatteryType;
         private double BatteryLife;
 
-        public Battery(string batteryName, double batteryLife)
+        public Battery(string batteryType, double batteryLife)
         {
-            if (batteryName == null || batteryName.Trim() == "" || batteryLife < 0)
+            if (batteryType == null || batteryType.Trim() == "" || batteryLife < 0)
             {
                 throw new ArgumentException("Invalid battery data!");
             }
             else
             {
-                this.BatteryName = batteryName;
+                this.BatteryType = batteryType;
                 this.BatteryLife = batteryLife;
             }
         }
