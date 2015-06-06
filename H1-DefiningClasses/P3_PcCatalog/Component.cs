@@ -9,6 +9,7 @@ namespace P3_PcCatalog
         private string details;
         private decimal price;
 
+        //getters and setters for the fields below
         public string Name
         {
             get { return this.name; }
@@ -30,9 +31,10 @@ namespace P3_PcCatalog
 
         public Component(string name, decimal price) : this(name, null, price)
         {
-            
+            //constructor which takes Name and Price only and then calls the below constructor
         }
 
+        // full constructor below which takes also the details, if they are empty they are not printed and no exception is raised
         public Component(string name, string details, decimal price)
         {
             if (name == null || name.Trim() == "" || price < 0)
@@ -41,16 +43,16 @@ namespace P3_PcCatalog
             }
             else
             {
-                this.Name = name;
-                this.Price = price;
-                this.Details = details;
+                this.name = name;
+                this.price = price;
+                this.details = details;
             }
         }
 
-        public override string ToString()
+        public override string ToString()   // if the component has details they are printed, otherwise only the name and the price is printed
         {
-            return string.Format("Component Name: " + this.Name + 
-                (this.Details == null ? " , Component Details: " + this.Details : "") + " , Component Price: " + this.Price);
+            return string.Format("Name: " + this.name +
+                (String.IsNullOrEmpty(this.details) ? "": " , Details: " + this.details) + " , Price: " + this.price);
         }
     }
 }

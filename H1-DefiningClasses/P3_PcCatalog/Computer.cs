@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace P3_PcCatalog
 {
@@ -25,31 +26,51 @@ namespace P3_PcCatalog
             get { return this.price; }
         }
 
-        public void AddComponent(Component component)
-        {
-            this.components.Add(component);
-        }
-
-        public decimal CalcPrice(IList<Component> components)
-        {
-            decimal totalPrice = 0m;
-            foreach (var c in components)
-            {
-                totalPrice += c.Price;
-            }
-            return totalPrice;
-        }
-
-        public string PrintComponents()
+        public Computer()   //empty constructor
         {
             
         }
 
-        public void PrintData()
+        public Computer(string name)    //constructor which takes only Name
         {
-            Console.WriteLine("Computer name: " + this.name + "\n" + 
-                "Components: " + this.components + "\n" + 
-                "Total Price: " + CalcPrice(this.components));
+            if (name == null || name.Trim() == "")
+            {
+                throw new ArgumentException("Name must not be empty");
+            }
+            this.name = name;
+        }
+
+        public void AddComponent(Component component)   //adds the component to the computer and updates its price
+        {
+            this.components.Add(component);
+            this.price += component.Price;
+        }
+
+        //private decimal CalcPrice(IList<Component> components)
+        //{
+        //    decimal totalPrice = 0m;
+        //    foreach (var c in components)
+        //    {
+        //        totalPrice += c.Price;
+        //    }
+        //    return totalPrice;
+        //}
+
+        private void PrintComponents()  //prints all the components by calling the toString() override
+        {
+            foreach (var component in this.components)
+            {
+                Console.WriteLine(component);
+            }
+        }
+
+        public void PrintComputer() //method which prints the computer data
+        {
+            Console.WriteLine(new string('=', 50) + "\n\nComputer name: " + this.name + "\n\n" +
+                              "Components:\n-----------");
+            PrintComponents();
+            Console.WriteLine("\n" + 
+                "Total Price: " + this.price + " lv\n\n" + new string('=', 50));
         }
     }
 }
