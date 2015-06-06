@@ -4,9 +4,10 @@ namespace P1_Persons
 {
     class Person
     {
-        public string Name;
-        public int Age;
-        public string Email;
+        // no getters or setters below, the constructors assign the values of fields
+        private string Name;
+        private int Age;
+        private string Email;
 
         public Person(string name, int age)
             : this(name, age, "")
@@ -28,7 +29,7 @@ namespace P1_Persons
             
             if (!email.Contains("@") || email.Trim() == "")
             {
-                this.Email = "empty";
+                this.Email = null;
             }
             else
             {
@@ -39,7 +40,7 @@ namespace P1_Persons
         public override string ToString()
         {
             return string.Format
-                ("Name -> {0} , Age -> {1} , E-mail -> {2}", this.Name, this.Age, this.Email);
+                ("Name -> " + this.Name + " , Age -> " + this.Age + (this.Email != null ? " , E-mail -> " + this.Email : ""));
         }
     }
 }

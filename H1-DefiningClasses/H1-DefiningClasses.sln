@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_Persons", "P1_Persons\P1_Persons.csproj", "{CDCD927A-C86D-4FE2-BAB8-7CF3B4CF9AD1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_LaptopShop", "P2_LaptopShop\P2_LaptopShop.csproj", "{75187A4A-3D67-4E25-BB03-3E9F184EF7E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CDCD927A-C86D-4FE2-BAB8-7CF3B4CF9AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDCD927A-C86D-4FE2-BAB8-7CF3B4CF9AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDCD927A-C86D-4FE2-BAB8-7CF3B4CF9AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75187A4A-3D67-4E25-BB03-3E9F184EF7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75187A4A-3D67-4E25-BB03-3E9F184EF7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75187A4A-3D67-4E25-BB03-3E9F184EF7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75187A4A-3D67-4E25-BB03-3E9F184EF7E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

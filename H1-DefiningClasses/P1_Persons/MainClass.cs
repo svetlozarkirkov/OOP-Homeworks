@@ -15,7 +15,7 @@ namespace P1_Persons
             Console.Write("Enter email (optional): ");
             string email = Console.ReadLine();
             //Console.WriteLine("email = {0}", email);
-            var personOne = new Person(name, age);  // object created by the constructor which does not take the email
+            var personOne = new Person(name, age);  // object created by the constructor which does not take the email (email value is skipped)
             var personTwo = new Person(name, age, email);   //object created by the constructor which takes the email if it exists
             Console.WriteLine(personOne);   // printing the objects at the console
             Console.WriteLine(personTwo);
