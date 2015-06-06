@@ -1,23 +1,41 @@
 ﻿using System;
 
-namespace P2_LaptopShop
+class Battery
 {
-    class Battery
-    {
-        private string BatteryType;
-        private double BatteryLife;
+    private string description;
+    private double batteryLife;
 
-        public Battery(string batteryType, double batteryLife)
+    public string Description
+    {
+        get { return this.description; }
+        set
         {
-            if (batteryType == null || batteryType.Trim() == "" || batteryLife < 0)
+            if (String.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException("Invalid battery data!");
+                throw new ArgumentNullException("description", "Battery info cannot be empty.");
             }
-            else
-            {
-                this.BatteryType = batteryType;
-                this.BatteryLife = batteryLife;
-            }
+
+            this.description = value;
         }
+    }
+
+    public double BatteryLife
+    {
+        get { return this.batteryLife; }
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException("batteryLife", "Battery life cannot be negative.");
+            }
+
+            this.batteryLife = value;
+        }
+    }
+
+    public Battery(string description, double batteryLife)
+    {
+        this.Description = description;
+        this.BatteryLife = batteryLife;
     }
 }
