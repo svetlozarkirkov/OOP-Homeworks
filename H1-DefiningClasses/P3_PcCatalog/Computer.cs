@@ -70,7 +70,7 @@ namespace P3_PcCatalog
                               "Components:\n-----------");
             PrintComponents();
             Console.WriteLine("\n" + 
-                "Total Price: " + this.price + " lv\n\n" + new string('=', 50));
+                "Total Price: " + String.Format("{0:C}",this.price) + "\n\n" + new string('=', 50));
         }
     }
 }

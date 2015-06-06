@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace P3_PcCatalog
 {
@@ -9,15 +7,18 @@ namespace P3_PcCatalog
     {
         static void Main(string[] args)
         {
-            //creating empty computer objects below
+            //creating computer objects below
             Computer msi = new Computer();
             Computer asus = new Computer();
-            Computer apple = new Computer();
+            Computer apple = new Computer("Apple");
 
-            //setting the computer objects names below
+            //setting the empty computer objects names below
             msi.Name = "MSI";
             asus.Name = "ASUS";
-            apple.Name = "Apple";
+
+            //below are components which have only their name set
+            Component saitek = new Component("Saitek Gamepad");
+            Component sony = new Component("Sony Headphones");
 
             //creating bunch of random component objects below, using the constructor which takes name and price
             Component intelProc = new Component("i5-3230", 450.20m);
@@ -58,7 +59,6 @@ namespace P3_PcCatalog
 
             //sorting and printing the computers in the above list using the method at the end of this class
             SortComputersByPriceAndPrint(computers);
-            Console.WriteLine(nvidiaGFX.Details);
         }
 
         static void SortComputersByPriceAndPrint(List<Computer> computers)

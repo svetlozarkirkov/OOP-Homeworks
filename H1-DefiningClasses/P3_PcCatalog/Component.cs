@@ -28,10 +28,14 @@ namespace P3_PcCatalog
             set { this.price = value; }
         }
 
+        public Component(string name) : this(name, null, price:0)
+        {
+            //constructor which takes only Name and sets the price to 0 and details to Null
+        }
 
         public Component(string name, decimal price) : this(name, null, price)
         {
-            //constructor which takes Name and Price only and then calls the below constructor
+            //constructor which takes Name and Price (details are Null) and then calls the below constructor
         }
 
         // full constructor below which takes also the details, if they are empty they are not printed and no exception is raised
@@ -52,7 +56,7 @@ namespace P3_PcCatalog
         public override string ToString()   // if the component has details they are printed, otherwise only the name and the price is printed
         {
             return string.Format("Name: " + this.name +
-                (String.IsNullOrEmpty(this.details) ? "": " , Details: " + this.details) + " , Price: " + this.price);
+                (String.IsNullOrEmpty(this.details) ? "" : " , Details: " + this.details) + " , Price: " + String.Format("{0:C}", this.price));
         }
     }
 }
