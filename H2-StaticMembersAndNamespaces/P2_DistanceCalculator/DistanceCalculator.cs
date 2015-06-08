@@ -1,4 +1,5 @@
 ﻿using System;
+using P1_Point3D;
 
 namespace P2_DistanceCalculator
 {
@@ -9,6 +10,14 @@ namespace P2_DistanceCalculator
             double deltaX = x2 - x1;
             double deltaY = y2 - y1;
             double deltaZ = z2 - z1;
+            return (double)Math.Sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+        }
+
+        public static double CalculateDistancePoint3D(Point3D a, Point3D b)
+        {
+            double deltaX = b.X - a.X;
+            double deltaY = b.Y - a.Y;
+            double deltaZ = b.Z - a.Z;
             return (double)Math.Sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
         }
     }

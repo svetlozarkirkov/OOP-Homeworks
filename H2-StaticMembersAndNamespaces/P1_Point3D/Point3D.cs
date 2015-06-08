@@ -2,7 +2,7 @@
 
 namespace P1_Point3D
 {
-    class Point3D
+    public class Point3D
     {
         private double x, y, z = 0d;
         private static readonly Point3D StartingPoint = new Point3D(0, 0, 0);
@@ -46,7 +46,7 @@ namespace P1_Point3D
 
         public override string ToString()   //printing the point3d in user friendly way
         {
-            return string.Format("[ x={0}, y={1}, z={2} ]", this.x, this.y, this.z);
+            return string.Format(" {{ x={0}, y={1}, z={2} }} ", this.x, this.y, this.z);
         }
     }
 }
