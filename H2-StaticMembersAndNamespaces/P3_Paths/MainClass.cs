@@ -14,6 +14,9 @@ namespace P3_Paths
             path.AddPoint3DToPath(pointTwo);
             Console.WriteLine(path);
             Storage.AddPathToFile("pathcollection.txt",path);
+            
+            var pathTwo = Storage.LoadPathFromFile("paths.txt");
+            Console.WriteLine(pathTwo);
         }
     }
 }
