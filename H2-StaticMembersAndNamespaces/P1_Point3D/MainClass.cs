@@ -12,6 +12,8 @@ namespace P1_Point3D
             initialPoint.X = 4.5;   //changing individual points in the instances
             constructedPoint.Z = 12;
 
+            var start = Point3D.ViewStartingPoint;  //invoking starting point static property
+
             Console.WriteLine(initialPoint);    // printing the objects to the console
             Console.WriteLine(constructedPoint);
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 
 namespace P1_Point3D
 {
@@ -8,6 +7,15 @@ namespace P1_Point3D
         private double x, y, z = 0d;
         private static readonly Point3D StartingPoint = new Point3D(0, 0, 0);
 
+        public static Point3D ViewStartingPoint 
+        {
+            get
+            {
+                return StartingPoint;
+            }
+        }
+
+        //getters and setters for all three points below
         public double X
         {
             get { return this.x; }
@@ -24,7 +32,7 @@ namespace P1_Point3D
             set { this.z = value; }
         }
 
-        public Point3D()    //empty constructor, equal to StartingPoint
+        public Point3D()    //empty constructor, equals to {0,0,0}
         {
             
         }
@@ -36,7 +44,7 @@ namespace P1_Point3D
             this.z = z;
         }
 
-        public override string ToString()
+        public override string ToString()   //printing the point3d in user friendly way
         {
             return string.Format("[ x={0}, y={1}, z={2} ]", this.x, this.y, this.z);
         }
