@@ -13,7 +13,7 @@ namespace P1_SquareRoot
                 int num = int.Parse(Console.ReadLine());
                 if (num < 0)
                 {
-                    Console.WriteLine("Invalid number");
+                    Console.Error.WriteLine("Invalid number!");
                 }
                 else
                 {
@@ -22,11 +22,11 @@ namespace P1_SquareRoot
             }
             catch (OverflowException)
             {
-                Console.WriteLine("Invalid number!");
+                Console.Error.WriteLine("Invalid number!");
             }
             catch (FormatException)
             {
-                Console.WriteLine("This is not a number!?");
+                Console.Error.WriteLine("Invalid number!");
             }
             finally
             {
