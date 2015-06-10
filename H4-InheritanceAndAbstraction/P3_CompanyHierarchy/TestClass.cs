@@ -6,6 +6,7 @@ namespace P3_CompanyHierarchy
     {
         static void Main()
         {
+            
         }
     }
 }
