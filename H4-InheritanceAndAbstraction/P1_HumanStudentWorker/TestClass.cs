@@ -25,8 +25,8 @@ namespace P1_HumanStudentWorker
                 new Student("Peter", "Baelish", "IRULE8754")
             };
             studentList = studentList.OrderBy(x => x.FacultyNumber).ToList();
-            Console.WriteLine("Student List ordered ascending by faculty number:\n------");
-            Console.WriteLine(string.Join("\n", studentList));
+            //Console.WriteLine("Student List ordered ascending by faculty number:\n------");
+            //Console.WriteLine(string.Join("\n", studentList));
 
             var workersList = new List<Worker>
             {
@@ -43,8 +43,8 @@ namespace P1_HumanStudentWorker
             };
 
             workersList = workersList.OrderByDescending(x => x.MoneyPerHour()).ToList();
-            Console.WriteLine("\n\nWorkers List ordered descending by money per hour:\n------");
-            Console.WriteLine(string.Join("\n", workersList));
+            //Console.WriteLine("\n\nWorkers List ordered descending by money per hour:\n------");
+            //Console.WriteLine(string.Join("\n", workersList));
 
             var merged = new List<Human>();
             merged.AddRange(workersList);
