@@ -9,12 +9,7 @@ namespace P1_HumanStudentWorker
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
 
-        public override string ToString()
-        {
-            return String.Format("\nFirst name: {0}\nLast name: {1}", this.FirstName, this.LastName);
-        }
-
-        public Human(string firstName, string lastName)
+        protected Human(string firstName, string lastName)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
@@ -23,5 +18,11 @@ namespace P1_HumanStudentWorker
             this.FirstName = firstName;
             this.LastName = lastName;
         }
+
+        public override string ToString()
+        {
+            return String.Format("\nFirst name: {0}\nLast name: {1}", this.FirstName, this.LastName);
+        }
+
     }
 }
