@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace P2_Animals
@@ -23,7 +24,11 @@ namespace P2_Animals
                 maria,
                 new Dog("Atanaska", 6, "female"),
                 new Kitten("Kircho", 2),
-                new Frog("Jack", 4, "male"), 
+                new Frog("Jack", 4, "male"),
+                new Dog("Pehlivanka", 1, "female"),
+                new Tomcat("Steve Jobs", 3),
+                new Cat("Zoe", 7, "female"),
+                new Frog("Bimbo",8, "male"), 
             };
 
             foreach (var animal in animalList)
@@ -33,8 +38,15 @@ namespace P2_Animals
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Average age of animals in the array is: {0:F2}",
+            Console.WriteLine("Average age of all animals in the array is: {0:F2}",
                 animalList.Average(x => x.Age));
+            
+            foreach (var kind in animalList.OrderBy(x => x.GetType().Name).GroupBy(x => x.GetType().Name))
+            {
+                double averageAge = kind.Select(x => x.Age).Average();
+                Console.WriteLine("Average age of {0}: {1:F2}", kind.Key, averageAge);
+            }
+            
         }
     }
 }
