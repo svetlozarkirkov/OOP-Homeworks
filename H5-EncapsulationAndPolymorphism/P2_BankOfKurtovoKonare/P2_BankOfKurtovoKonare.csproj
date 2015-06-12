@@ -49,6 +49,7 @@
     <Compile Include="Classes\Loan.cs" />
     <Compile Include="Classes\Mortgage.cs" />
     <Compile Include="Interfaces\IInterest.cs" />
+    <Compile Include="Interfaces\IWithdrawable.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

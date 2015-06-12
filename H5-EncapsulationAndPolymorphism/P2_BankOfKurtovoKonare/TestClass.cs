@@ -7,10 +7,12 @@ namespace P2_BankOfKurtovoKonare
     {
         static void Main()
         {
-            var billGates = new Individual("Bill", "Gates");
-            var microsoft = new Company("Microsoft");
-            Console.WriteLine(billGates);
-            Console.WriteLine(microsoft);
+            Customer billGates = new Individual("Bill", "Gates");
+            Customer microsoft = new Company("Microsoft");
+            var billGatesAccount = new Deposit(billGates, 1000);
+            Console.WriteLine(billGatesAccount);
+            var microsoftAccount = new Mortgage(microsoft, 9875);
+            Console.WriteLine(microsoftAccount);
         }
     }
 }
