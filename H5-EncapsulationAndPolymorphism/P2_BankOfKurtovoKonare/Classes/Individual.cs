@@ -1,6 +1,4 @@
-﻿using System;
-using P2_BankOfKurtovoKonare.Interfaces;
-
+﻿
 namespace P2_BankOfKurtovoKonare.Classes
 {
     class Individual : Customer
@@ -14,9 +12,13 @@ namespace P2_BankOfKurtovoKonare.Classes
             this.FirstName = firstName;
             this.LastName = lastName;
         }
-        public void CalculateInterest()
+        //public void CalculateInterest()
+        //{
+        //    throw new NotImplementedException();
+        //}
+        public override string GetName()
         {
-            throw new NotImplementedException();
+            return this.FirstName + " " + this.LastName;
         }
         public override string ToString()
         {

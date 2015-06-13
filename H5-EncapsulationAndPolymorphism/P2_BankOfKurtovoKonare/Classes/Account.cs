@@ -12,12 +12,13 @@ namespace P2_BankOfKurtovoKonare.Classes
         public decimal Balance { get; set; }
         public decimal InterestRate { get; set; }
 
-        protected Account(Customer user, decimal balance)
+        protected Account(Customer user, decimal balance, decimal interestRate)
         {
             this.User = user;
             this.Balance = balance;
+            this.InterestRate = interestRate;
         }
-        public abstract decimal CalculateInterest();
+        public abstract decimal CalculateInterest(decimal money, int months);
 
         public void DepositMoney(decimal moneyAmount)
         {
@@ -25,7 +26,7 @@ namespace P2_BankOfKurtovoKonare.Classes
         }
         public override string ToString()
         {
-            return string.Format("Account type: {0}\n{1}Balance: {2}\nInterest rate: {3}",
+            return string.Format("Account type: {0}\n{1}Balance: {2:C2}\nInterest rate: {3}",
                 this.GetType().Name, this.User, this.Balance, this.InterestRate);
         }
     }

@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace P2_BankOfKurtovoKonare.Classes
 {
     class Company : Customer
@@ -10,6 +9,11 @@ namespace P2_BankOfKurtovoKonare.Classes
         public Company(string companyName)
         {
             this.CompanyName = companyName;
+        }
+
+        public override string GetName()
+        {
+            return this.CompanyName;
         }
 
         public override string ToString()

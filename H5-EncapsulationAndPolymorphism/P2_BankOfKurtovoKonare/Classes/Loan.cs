@@ -1,17 +1,23 @@
-﻿using System;
-using P2_BankOfKurtovoKonare.Interfaces;
-
+﻿
 namespace P2_BankOfKurtovoKonare.Classes
 {
     class Loan : Account
     {
-        public Loan(Customer user, decimal balance) : base(user, balance)
+        public Loan(Customer user, decimal balance, decimal interestRate) : 
+            base(user, balance, interestRate)
         {
             
         }
-        public override decimal CalculateInterest()
+        public override decimal CalculateInterest(decimal money, int months)
         {
-            throw new NotImplementedException();
+            if (this.User.GetType().Name == "Individual")
+            {
+                return ((money * this.InterestRate) / 12) * (months - 3);
+            }
+            else
+            {
+                return ((money*this.InterestRate)/12)*(months - 2);
+            }
         }
     }
 }
