@@ -1,5 +1,6 @@
 ﻿using System;
 using P2_BankOfKurtovoKonare.Classes;
+using P2_BankOfKurtovoKonare.Interfaces;
 
 namespace P2_BankOfKurtovoKonare
 {
@@ -26,6 +27,13 @@ namespace P2_BankOfKurtovoKonare
                 billGatesAccount.User.GetName(), billGatesAccount.CalculateInterest(234, 10));
             Console.WriteLine("Interest for {0}: {1:C2}",
                 microsoftAccount.User.GetName(), microsoftAccount.CalculateInterest(73567, 24));
+
+            IInterest[] accounts = {billGatesAccount, microsoftAccount};
+            foreach (var acc in accounts)
+            {
+                Console.Write(acc.GetType().Name + ": ");
+                Console.WriteLine(acc.CalculateInterest(1450.56m, 16));
+            }
         }
     }
 }
