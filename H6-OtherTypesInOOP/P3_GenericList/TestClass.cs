@@ -30,6 +30,12 @@ namespace P3_GenericList
             Console.WriteLine("Max: {0}", GenericList<int>.Max(test));
             test.Clear();
             Console.WriteLine("Cleared list: {0}", test);
+
+            System.Reflection.MemberInfo info = typeof(GenericList<>);
+            foreach (object attribute in info.GetCustomAttributes(false))
+            {
+                Console.WriteLine(attribute);
+            }
         }
     }
 }

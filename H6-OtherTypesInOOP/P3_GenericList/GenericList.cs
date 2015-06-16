@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace P3_GenericList
 {
+    [Version(0, 1)]
     class GenericList<T>
     {
         private const int DefaultCapacity = 16;

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_GalacticGPS", "P1_Galact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_FractionCalculator", "P2_FractionCalculator\P2_FractionCalculator.csproj", "{4A411154-43F3-414B-B1AB-3B5A6AFE59C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_GenericList", "P3_GenericList\P3_GenericList.csproj", "{69A30A34-0D95-446F-B178-EB8BDBF51CEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_P4_GenericList_Version", "P3_GenericList\P3_P4_GenericList_Version.csproj", "{69A30A34-0D95-446F-B178-EB8BDBF51CEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
