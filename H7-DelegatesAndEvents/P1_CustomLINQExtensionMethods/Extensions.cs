@@ -25,12 +25,20 @@ namespace P1_CustomLINQExtensionMethods
         }
 
         public static TSelector Max<TSource, TSelector>
-            (this IEnumerable<TSource> collection, 
-            Func<TSource, TSelector> selector)
+            (this IEnumerable<TSource> collection,
+            Func<TSource, TSelector> selector) where TSelector : IComparable
         {
-            //Console.WriteLine(typeof(TSelector));
+            TSelector result = selector(collection.First());
 
-            return default(TSelector);
+            foreach (var element in collection)
+            {
+                if (result.CompareTo(selector(element)) < 0)
+                {
+                    result = selector(element);
+                }
+            }
+
+            return result;
         }
     }
 }
