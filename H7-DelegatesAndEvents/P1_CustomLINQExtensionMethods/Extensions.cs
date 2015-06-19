@@ -26,8 +26,10 @@ namespace P1_CustomLINQExtensionMethods
 
         public static TSelector Max<TSource, TSelector>
             (this IEnumerable<TSource> collection, 
-            Func<TSource, TSelector> selector) where TSource : IComparable
+            Func<TSource, TSelector> selector)
         {
+            //Console.WriteLine(typeof(TSelector));
+
             return default(TSelector);
         }
     }

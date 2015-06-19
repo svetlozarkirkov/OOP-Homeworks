@@ -27,6 +27,8 @@ namespace P1_CustomLINQExtensionMethods
 
             Console.WriteLine("Filtered students: {0}" ,
                 string.Join(", ", students.WhereNot(x => x.Grade <= 3)));
+
+            //Console.WriteLine(students.Sort());
         }
     }
 }
