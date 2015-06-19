@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_CustomLINQExtensionMetho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_InterestCalculator", "P2_InterestCalculator\P2_InterestCalculator.csproj", "{251F6777-31B2-4167-B8FB-281F4741C349}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_AsynchronousTimer", "P3_AsynchronousTimer\P3_AsynchronousTimer.csproj", "{76D16FF3-4C52-4BA2-86CD-442FB0E0B304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P4_StudentClass", "P4_StudentClass\P4_StudentClass.csproj", "{D4F490BF-99EE-46E8-968A-1940AB8CB5BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{251F6777-31B2-4167-B8FB-281F4741C349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251F6777-31B2-4167-B8FB-281F4741C349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251F6777-31B2-4167-B8FB-281F4741C349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D16FF3-4C52-4BA2-86CD-442FB0E0B304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D16FF3-4C52-4BA2-86CD-442FB0E0B304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D16FF3-4C52-4BA2-86CD-442FB0E0B304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D16FF3-4C52-4BA2-86CD-442FB0E0B304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F490BF-99EE-46E8-968A-1940AB8CB5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F490BF-99EE-46E8-968A-1940AB8CB5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F490BF-99EE-46E8-968A-1940AB8CB5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F490BF-99EE-46E8-968A-1940AB8CB5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
