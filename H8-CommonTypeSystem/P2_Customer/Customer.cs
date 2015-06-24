@@ -106,24 +106,21 @@ namespace P2_Customer
                         this.MobilePhone,this.Email,this.CustomerType, payments);
         }
 
-        public object Clone()
+        public Customer Clone()
         {
-            Customer customerCopy = new Customer(this.FirstName,this.MiddleName,this.LastName,
+            return new Customer(this.FirstName,this.MiddleName,this.LastName,
                 this.Id,this.PermanentAddress,this.MobilePhone,this.Email,this.CustomerType);
-            return customerCopy;
         }
+
+        object ICloneable.Clone() { return Clone(); }
 
         public int CompareTo(Customer other)
         {
             if (this.FullName == other.FullName)
             {
-                return 0;
+                return this.Id.CompareTo(other.Id);
             }
-            if (this.Id == other.Id)
-            {
-                return 0;
-            }
-            return 1;
+            return this.FullName.CompareTo(other.FullName);
         }
     }
 }
