@@ -23,10 +23,6 @@ namespace P3_StringDisperser
         {
             this.StringElements = args;
             this.CharElements = new List<char>();
-            if (this.StringElements.Length == 0)
-            {
-                return;
-            }
             foreach (var stringElement in this.StringElements)
             {
                 foreach (var charElement in stringElement)
@@ -66,6 +62,10 @@ namespace P3_StringDisperser
 
         public override string ToString()
         {
+            if (this.StringElements.Length == 0)
+            {
+                return "Empty";
+            }
             string result = string.Format("Strings: [ {0} ]\nChars: [ {1} ]\nChar Sum: {2}",
                 string.Join(", ", this.StringElements), string.Join(" ", this.CharElements),this.CharSum);
             return result;
